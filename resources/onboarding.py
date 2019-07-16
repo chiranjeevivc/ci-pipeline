@@ -1,4 +1,7 @@
-def my_function():
- print("Hello from a function")
+import sys, getopt
 
-my_function()
+def my_function(argv):
+ print("My First Project:", argv )
+ 
+if __name__ == "__main__":\
+ my_function(sys.argv[1])
