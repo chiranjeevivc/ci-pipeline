@@ -37,7 +37,6 @@ def createJiraProject():
 
    response  = requests.post( url1, data = payload, auth=(UserEmail,APIKey), headers={"content-type":"application/json"} )
    print(response.status_code)
-   print(json.dumps(response.json(),indent=4,sort_keys=True))
    if response.status_code == 201:
        print("Jira Project has been created successfully")
        print(json.dumps(response.json(),indent=4,sort_keys=True))

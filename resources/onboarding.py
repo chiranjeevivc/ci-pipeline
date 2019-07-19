@@ -38,15 +38,10 @@ def createBitBucketProject():
        print("BitBucket Project has been created successfully")
        print(json.dumps(resp.json(),indent=4,sort_keys=True))
    elif resp.status_code == 400:
-       print("BitBucket Project already exits")
+       print("Invalid Project Inputs")
        print(json.dumps(resp.json(),indent=4,sort_keys=True))
    else:
        raise APIException("Unable to Create BitBucket Project",resp)
   
-
-def createJiraProject():
-   print("Creating Jira Project")
-
 if __name__ == "__main__":
    createBitBucketProject()
-   createJiraProject()
